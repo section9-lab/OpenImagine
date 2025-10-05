@@ -1,0 +1,92 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d946ef;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="sparkleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="200" cy="200" r="180" fill="url(#mainGradient)" opacity="0.1"/>
+  
+  <!-- Main Window Frame -->
+  <g filter="url(#glow)">
+    <!-- Window 1 (back) -->
+    <rect x="140" y="140" width="140" height="100" rx="8" fill="url(#mainGradient)" opacity="0.4"/>
+    <rect x="140" y="140" width="140" height="20" rx="8" fill="url(#mainGradient)" opacity="0.6"/>
+    <circle cx="150" cy="150" r="3" fill="#fff" opacity="0.8"/>
+    <circle cx="160" cy="150" r="3" fill="#fff" opacity="0.8"/>
+    <circle cx="170" cy="150" r="3" fill="#fff" opacity="0.8"/>
+    
+    <!-- Window 2 (middle) -->
+    <rect x="120" y="160" width="140" height="100" rx="8" fill="url(#mainGradient)" opacity="0.6"/>
+    <rect x="120" y="160" width="140" height="20" rx="8" fill="url(#mainGradient)" opacity="0.8"/>
+    <circle cx="130" cy="170" r="3" fill="#fff"/>
+    <circle cx="140" cy="170" r="3" fill="#fff"/>
+    <circle cx="150" cy="170" r="3" fill="#fff"/>
+    
+    <!-- Window 3 (front) -->
+    <rect x="100" y="180" width="140" height="100" rx="8" fill="url(#mainGradient)"/>
+    <rect x="100" y="180" width="140" height="20" rx="8" fill="url(#mainGradient)" style="filter: brightness(1.2)"/>
+    <circle cx="110" cy="190" r="3" fill="#fff"/>
+    <circle cx="120" cy="190" r="3" fill="#fff"/>
+    <circle cx="130" cy="190" r="3" fill="#fff"/>
+    
+    <!-- Content lines in front window -->
+    <rect x="110" y="210" width="80" height="4" rx="2" fill="#fff" opacity="0.6"/>
+    <rect x="110" y="220" width="100" height="4" rx="2" fill="#fff" opacity="0.6"/>
+    <rect x="110" y="230" width="60" height="4" rx="2" fill="#fff" opacity="0.6"/>
+  </g>
+  
+  <!-- Imagination Sparkle/Star Effect -->
+  <g transform="translate(240, 160)">
+    <path d="M 0,-20 L 2,-6 L 16,-4 L 2,-2 L 0,12 L -2,-2 L -16,-4 L -2,-6 Z" 
+          fill="url(#sparkleGradient)" opacity="0.9">
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0"
+        to="360"
+        dur="8s"
+        repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <g transform="translate(260, 220)">
+    <path d="M 0,-12 L 1.5,-4 L 9,-2.5 L 1.5,-1 L 0,7 L -1.5,-1 L -9,-2.5 L -1.5,-4 Z" 
+          fill="url(#sparkleGradient)" opacity="0.7">
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0"
+        to="-360"
+        dur="6s"
+        repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Project Name -->
+  <text x="200" y="330" font-family="'Segoe UI', Tahoma, sans-serif" font-size="36" font-weight="700" fill="url(#mainGradient)" text-anchor="middle">
+    OpenImagine
+  </text>
+  
+  <text x="200" y="355" font-family="'Segoe UI', Tahoma, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle" opacity="0.8">
+    Web Operating System
+  </text>
+</svg>

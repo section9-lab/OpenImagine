@@ -1,6 +1,7 @@
 # OpenImagine
 
-![](./public/openimagine-logo.svg)
+<div align="center"><img src="./public/openimagine-logo.svg" width="60%" /></div>
+
 
 OpenImagine is a web-based operating system interface built with Next.js 15 and React 19. It mimics Claude AI's Imagine functionality, providing a conversational interface for desktop management and application launching. The application features a complete windowing system with draggable windows, taskbar, and AI-powered conversation dock.
 
